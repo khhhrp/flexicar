@@ -1,0 +1,44 @@
+@use "../base/variables" as var;
+
+$n: 100;
+
+.avatar {
+  position: relative;
+  width: 5.6rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.2rem solid var.$white;
+  background-color: var.$terracotta--200;
+  z-index: $n;
+
+  @for $i from 2 through 10 {
+    &:nth-child(#{$i}) {
+      translate: calc(-1.3rem * ($i - 1));
+      z-index: $n - ($i - 1);
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: contain;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    aspect-ratio: 1;
+    border: 0.1rem solid var.$white;
+    border-radius: 50%;
+    background-color: var.$green--900;
+    bottom: 0;
+    right: 0;
+  }
+
+  &:nth-child(even) {
+    background-color: var.$terracotta--300;
+  }
+}

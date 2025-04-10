@@ -1,0 +1,83 @@
+@use "../base/variables" as var;
+
+.contact-us {
+  padding-block: 8rem;
+  position: relative;
+  min-height: 46.6rem;
+  background-image: url("../img/car2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(var.$dark--900, 0.4);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+    padding: 3.2rem 3.2rem 4rem;
+
+    @media (width >=768px) {
+      max-width: 45.7rem;
+      padding-inline: 0;
+    }
+
+    @media (width >= 1024px) {
+      padding-inline: 3.2rem;
+    }
+  }
+
+  &__avatars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -1.3rem;
+
+    @media (width >=768px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+
+    @media (width >=768px) {
+      max-width: 45.7rem;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+
+    @media (width >1024px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__btn {
+    font-weight: 500;
+    align-self: center;
+
+    @media (width >=768px) {
+      align-self: flex-start;
+    }
+  }
+}

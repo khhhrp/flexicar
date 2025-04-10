@@ -1,0 +1,126 @@
+@use "../base/variables" as var;
+
+.header {
+  padding: 0.4rem 1.6rem;
+  background-color: var.$dark--400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 6rem;
+
+  @media (width >= 768px) {
+    padding-block: 1.6rem;
+  }
+
+  @media (width >= 1024px) {
+    padding-inline: 4rem;
+  }
+
+  &__logo {
+    img {
+      width: 15rem;
+      max-width: 100%;
+
+      @media (width >= 1024px) {
+        max-width: 12.6rem;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: 8.4rem;
+    overflow-x: hidden;
+  }
+
+  &__nav {
+    display: none;
+    column-gap: 2.4rem;
+
+    @media (width >= 1024px) {
+      display: flex;
+      overflow-x: auto;
+    }
+  }
+
+  &__link {
+    color: var.$white;
+    font-size: 1.6rem;
+    transition: color, 250ms ease;
+    white-space: nowrap;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var.$primary;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+
+    @media (width >= 1024px) {
+      display: none;
+    }
+  }
+
+  &__phone-link {
+    display: none;
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    align-items: center;
+    column-gap: 0.4rem;
+    color: var.$gray--400;
+    transition: color 250ms ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var.$primary;
+      }
+    }
+
+    @media (width >= 768px) {
+      display: flex;
+    }
+  }
+
+  &__actions {
+    display: none;
+    column-gap: 1.6rem;
+    font-size: 1.6rem;
+
+    @media (width >= 1024px) {
+      display: flex;
+    }
+  }
+
+  &__lang-btn,
+  &__actions-link {
+    padding: 0.8rem 1.6rem;
+    display: flex;
+    align-items: center;
+    color: var.$gray--400;
+    white-space: nowrap;
+    transition: color 250ms ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var.$primary;
+      }
+    }
+  }
+
+  &__lang-btn {
+    font-size: 1.6rem;
+    column-gap: 0.8rem;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__actions-link {
+    column-gap: 0.4rem;
+  }
+}

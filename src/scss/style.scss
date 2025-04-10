@@ -1,2 +1,24 @@
 //base
-@use "./base/custom-reset"
+@use "./base/custom-reset";
+@use "./base/variables";
+@use "./base/general";
+
+//components
+@use "./components/icon";
+@use "./components/logo";
+@use "./components/burger-btn";
+@use "./components/progress";
+@use "./components/rental-card";
+@use "./components/rental-steps";
+@use "./components/options";
+@use "./components/avatar";
+@use "./components/main-btn";
+@use "./components/input-group";
+
+//layouts
+@use "./layouts/header";
+@use "./layouts/footer";
+
+//sections
+@use "./sections/contact-us";
+@use "./sections/rental";

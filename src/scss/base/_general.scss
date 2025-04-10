@@ -1,0 +1,43 @@
+@use "../base/variables" as var;
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  color: var.$white;
+  background-color: var.$dark--900;
+}
+
+button {
+  font-family: inherit;
+
+  @media (hover: hover) {
+    cursor: pointer;
+  }
+}
+
+.main-container {
+  max-width: 149rem;
+  padding-inline: 1.6rem;
+  width: 100%;
+  margin-inline: auto;
+
+  @media (width >=768px) {
+    padding-inline: 3.2rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

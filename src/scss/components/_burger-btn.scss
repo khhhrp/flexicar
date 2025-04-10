@@ -1,0 +1,58 @@
+@use "../base/variables" as var;
+
+.burger-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
+  span {
+    position: relative;
+    background-color: var.$gray--400;
+    height: 0.2rem;
+    width: 2rem;
+    border-radius: 0.9rem;
+    transition: background-color 250ms ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      translate: -50%;
+      background-color: var.$gray--400;
+      height: 0.2rem;
+      width: 2rem;
+      border-radius: 0.9rem;
+      transition: background-color 250ms ease;
+    }
+
+    &::before {
+      top: 0.6rem;
+    }
+
+    &::after {
+      bottom: 0.6rem;
+    }
+  }
+
+  @media (hover: hover) {
+    cursor: pointer;
+
+    &:hover {
+      span {
+        background-color: var.$primary;
+
+        &::before,
+        &::after {
+          background-color: var.$primary;
+        }
+      }
+    }
+  }
+}

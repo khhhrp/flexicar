@@ -1,0 +1,20 @@
+@use "../base/variables" as var;
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+
+  &__label {
+    font-size: 1.4rem;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var.$gray--700;
+    padding: 1.2rem 1.4rem;
+    color: var.$white;
+  }
+}

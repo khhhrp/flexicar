@@ -1,0 +1,27 @@
+@use "../base/variables" as var;
+
+.main-btn {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  border: none;
+  background-color: var.$primary;
+  width: fit-content;
+  color: var.$white;
+  min-width: 10.8rem;
+  min-height: 4.4rem;
+  border-radius: 0.8rem;
+  white-space: nowrap;
+  padding: 1.2rem 2.6rem;
+  transition: background-color 250ms ease;
+
+  &--light {
+    background-color: rgba(var.$primary, 0.2);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var.$primary--light;
+    }
+  }
+}

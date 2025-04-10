@@ -1,0 +1,100 @@
+@use "../base/variables" as var;
+
+.progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 2.7rem;
+  min-height: 4.6rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 0.1rem;
+    top: 50%;
+    translate: 0 -50%;
+    left: 1.2rem;
+    right: 1.2rem;
+    background-image: linear-gradient(
+      to right,
+      var.$primary,
+      15%,
+      var.$gray--700 0
+    );
+  }
+
+  &--second {
+    &::before {
+      background-image: linear-gradient(
+        to right,
+        var.$primary,
+        50%,
+        var.$gray--700 0
+      );
+    }
+  }
+
+  &--third {
+    &::before {
+      background-image: linear-gradient(
+        to right,
+        var.$primary,
+        85%,
+        var.$gray--700 0
+      );
+    }
+  }
+
+  &__indicator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    aspect-ratio: 1;
+    background-color: var.$gray--700;
+    border-radius: 50%;
+    z-index: 10;
+
+    svg {
+      display: none;
+    }
+
+    &--current {
+      background-color: var.$primary;
+      border: 0.1rem solid var.$white;
+      outline: 0.6rem solid rgba(var.$primary, 0.2);
+    }
+
+    &--completed {
+      background-color: var.$primary--light;
+      outline: 0.6rem solid var.$primary--light;
+      outline-offset: -0.1rem;
+
+      svg {
+        display: block;
+      }
+    }
+
+    &::before {
+      content: attr(data-before);
+      position: absolute;
+      text-align: center;
+      top: 100%;
+      padding-top: 1.3rem;
+      width: 6.8rem;
+      font-weight: 300;
+      color: var.$gray--500;
+    }
+
+    @media (width >=768px) {
+      &::before {
+        font-size: 1.2rem;
+        font-weight: 400;
+        width: 12rem;
+        padding-top: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "../base/variables" as var;
+
+.rental-steps {
+  border-top: 0.1rem solid var.$gray--700;
+  border-bottom: 0.1rem solid var.$gray--700;
+  background-color: var.$dark--400;
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
+
+  @media (width >= 768px) {
+    padding-top: 1.6rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.4rem;
+
+    @media (width >= 768px) {
+      row-gap: 5.5rem;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+    padding-top: 0.8rem;
+
+    img {
+      width: 72px;
+      aspect-ratio: 1;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    color: var.$gray--500;
+  }
+
+  &__day {
+    font-size: 1.4rem;
+  }
+}
