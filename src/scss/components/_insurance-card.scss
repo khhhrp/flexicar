@@ -1,0 +1,84 @@
+@use "../base/variables" as var;
+
+.insurance-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  color: var.$white;
+  background-color: rgba(var.$white, 0.05);
+  transition-property: background-color, translate, outline-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  outline: 0.2rem solid transparent;
+
+  &:nth-child(2) {
+    outline-color: var.$gray--700;
+    background-image: url("../img/cardBg.webp"),
+      linear-gradient(-25deg, var.$primary, var.$terracotta--500);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    svg {
+      color: var.$white;
+    }
+  }
+
+  &:nth-child(3) {
+    svg {
+      color: var.$green--300;
+    }
+  }
+
+  @media(hover: hover) {
+    &:hover {
+      translate: 0 -0.5rem;
+      outline-color: var.$primary;
+      background-color: rgba(var.$primary, 0.2);
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__subtitle,
+  &__title {
+    font-size: 1.6rem;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+  }
+
+  &__text {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 0.8rem;
+    font-size: 1.4rem;
+
+    svg {
+      flex-shrink: 0;
+      color: var.$red;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var.$gray--600;
+  }
+}

@@ -426,38 +426,41 @@
         </article>
       </div>
       <div class="rental-steps">
-        <div class="main-container rental-steps__container">
-          <div class="progress progress--third">
-            <span
-              class="progress__indicator progress__indicator--completed"
-              data-before="Add on extras"
-            >
+        <div class="progress">
+          <div class="progress__item">
+            <div class="progress__indicator">
               <svg class="icon icon--16">
                 <use href="#checkV"></use>
               </svg>
-            </span>
-            <span
-              class="progress__indicator progress__indicator--completed"
-              data-before="Insurance"
-            >
-              <svg class="icon icon--16">
-                <use href="#checkV"></use>
-              </svg>
-            </span>
-            <span
-              class="progress__indicator progress__indicator--current"
-              data-before="Confirm Order"
-            >
-              <svg class="icon icon--16">
-                <use href="#checkV"></use>
-              </svg>
-            </span>
-            <span class="progress__indicator" data-before="Payment">
-              <svg class="icon icon--16">
-                <use href="#checkV"></use>
-              </svg>
-            </span>
+            </div>
+            <p class="progress__text">Add on extras</p>
           </div>
+          <div class="progress__item progress__item--active">
+            <div class="progress__indicator">
+              <svg class="icon icon--16">
+                <use href="#checkV"></use>
+              </svg>
+            </div>
+            <p class="progress__text">Insurance</p>
+          </div>
+          <div class="progress__item">
+            <div class="progress__indicator">
+              <svg class="icon icon--16">
+                <use href="#checkV"></use>
+              </svg>
+            </div>
+            <p class="progress__text">Add on extras</p>
+          </div>
+          <div class="progress__item">
+            <div class="progress__indicator">
+              <svg class="icon icon--16">
+                <use href="#checkV"></use>
+              </svg>
+            </div>
+            <p class="progress__text">Add on extras</p>
+          </div>
+        </div>
+        <div class="main-container rental-steps__container">
           <article class="rental-steps__card">
             <img src="./src/img/rental-car.webp" alt="" />
             <div class="rental-steps__info">
@@ -472,7 +475,8 @@
         <div class="main-container options__container">
           <h2 class="options__title">Add on extras</h2>
           <div class="options__cards">
-            <button type="button" class="options__card">
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -480,13 +484,14 @@
                   </svg>
                 </div>
                 <span class="options__card-title">Unlimited Mileage</span>
-                <span class="options__card-price">$15</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
-            <button type="button" class="options__card options__card--active">
+            </label>
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -494,13 +499,14 @@
                   </svg>
                 </div>
                 <span class="options__card-title">Cross-border Fee</span>
-                <span class="options__card-price">15 EUR</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
-            <button type="button" class="options__card">
+            </label>
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -508,13 +514,14 @@
                   </svg>
                 </div>
                 <span class="options__card-title">Full Tank Service</span>
-                <span class="options__card-price">15 EUR</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
-            <button type="button" class="options__card">
+            </label>
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -522,13 +529,14 @@
                   </svg>
                 </div>
                 <span class="options__card-title">Child Seat</span>
-                <span class="options__card-price">15 EUR</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
-            <button type="button" class="options__card">
+            </label>
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -536,13 +544,14 @@
                   </svg>
                 </div>
                 <span class="options__card-title">GPS Navigation System</span>
-                <span class="options__card-price">15 EUR</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
-            <button type="button" class="options__card">
+            </label>
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -552,14 +561,14 @@
                 <span class="options__card-title"
                   >Wi-Fi HotspotWi-Fi Hotspot</span
                 >
-                <span class="options__card-price">15 EUR</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
-
-            <button type="button" class="options__card">
+            </label>
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -567,13 +576,14 @@
                   </svg>
                 </div>
                 <span class="options__card-title">Additional Driver</span>
-                <span class="options__card-price">15 EUR</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
-            <button type="button" class="options__card">
+            </label>
+            <label class="options__card">
+              <input type="checkbox" class="options__checkbox" />
               <div class="options__card-content">
                 <div class="options__card-image">
                   <svg class="icon icon--20">
@@ -583,29 +593,218 @@
                 <span class="options__card-title"
                   >Roadside assistance waiver</span
                 >
-                <span class="options__card-price">15 EUR</span>
+                <span class="options__card-price">15 eur</span>
               </div>
               <div class="options__card-status">
-                <span></span>
+                <span class="options__card-check"></span>
               </div>
-            </button>
+            </label>
           </div>
         </div>
       </div>
-      <button class="main-btn rental__btn">Proceed to Booking</button>
+      <div class="insurance">
+        <div class="main-container insurance__container">
+          <h2 class="insurance__title">Insurance</h2>
+          <div class="insurance__cards">
+            <a href="#!" class="insurance-card">
+              <div class="insurance-card__top">
+                <h3 class="insurance-card__subtitle">No Insurance</h3>
+                <h2 class="insurance-card__price">Free</h2>
+              </div>
+              <div class="insurance-card__info">
+                <h4 class="insurance-card__title">Important Notice:</h4>
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#alert"></use>
+                  </svg>
+                  You are fully responsible for any damage to the vehicle.
+                </p>
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#alert"></use>
+                  </svg>
+                  Full repair costs will be charged in case of an accident or
+                  damage (no financial limit).
+                </p>
+              </div>
+              <p class="insurance-card__description">
+                We strongly recommend choosing one of the insurance options to
+                ensure a worry-free journey.
+              </p>
+            </a>
+            <a href="#!" class="insurance-card">
+              <div class="insurance-card__top">
+                <h3 class="insurance-card__subtitle">Basic Insurance</h3>
+                <h2 class="insurance-card__price">15 EUR/day</h2>
+              </div>
+              <div class="insurance-card__info">
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#check"></use>
+                  </svg>
+                  Coverage for vehicle damage in case of an accident (with
+                  excess).
+                </p>
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#check"></use>
+                  </svg>
+                  Limited financial liability with a deductible/excess.
+                </p>
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#check"></use>
+                  </svg>
+                  Partial coverage for car body damages (does not cover tires,
+                  windows, roof, or undercarriage).
+                </p>
+              </div>
+            </a>
+            <a href="#!" class="insurance-card">
+              <div class="insurance-card__top">
+                <h3 class="insurance-card__subtitle">
+                  Comprehensive Insurance
+                </h3>
+                <h2 class="insurance-card__price">25 EUR/day</h2>
+              </div>
+              <div class="insurance-card__info">
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#check"></use>
+                  </svg>
+                  Full coverage for all damages (including tires, windows, roof,
+                  and undercarriage).
+                </p>
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#check"></use>
+                  </svg>
+                  Theft protection.
+                </p>
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#check"></use>
+                  </svg>
+                  No deductible/excess (or minimal excess).
+                </p>
+                <p class="insurance-card__text">
+                  <svg class="icon icon--16">
+                    <use href="#check"></use>
+                  </svg>
+                  Roadside assistance in case of breakdowns or accidents.
+                </p>
+              </div>
+            </a>
+          </div>
+          <button class="main-btn rental__btn">Proceed to Booking</button>
+        </div>
+      </div>
+      <form class="confirm-form">
+        <div class="main-container confirm-form__container">
+          <h2 class="confirm-form__title">Confirming Order</h2>
+          <div class="input-group confirm-form__group">
+            <label class="input-group__label">First Name <span>*</span></label>
+            <input
+              class="input-group__input"
+              type="email"
+              required
+              minlength="4"
+              placeholder="Enter Your First Name"
+            />
+          </div>
+          <div class="input-group confirm-form__group">
+            <label class="input-group__label">Last Name <span>*</span></label>
+            <input
+              class="input-group__input"
+              type="email"
+              required
+              minlength="4"
+              placeholder="Enter Your Last Name"
+            />
+          </div>
+          <div class="input-group confirm-form__group">
+            <label class="input-group__label"
+              >Phone number <span>*</span></label
+            >
+            <div class="input-group__wrapper">
+              <input
+                class="input-group__input input-group__input--tel"
+                type="tel"
+                required
+                placeholder="+1 (555) 000-0000"
+              />
+              <button type="button" class="input-group__country-btn">
+                US
+                <svg class="icon icon--20">
+                  <use href="#chevronDown"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="input-group confirm-form__group">
+            <label class="input-group__label">Email <span>*</span></label>
+            <input
+              class="input-group__input"
+              type="email"
+              required
+              minlength="4"
+              placeholder="olivia@untitledui.com"
+            />
+          </div>
+          <article class="confirm-card">
+            <div class="confirm-card__content">
+              <p class="confirm-card__date">
+                Date
+                <span>Jan 1 | 08:00 - Jan 2 | 20:00</span>
+              </p>
+              <p class="confirm-card__location">
+                Location
+                <span>Bratislava Bus... - Bratislava Bus...</span>
+              </p>
+              <p class="confirm-card__car">
+                Volkswagen Touareg
+                <span>32,98 EUR</span>
+              </p>
+              <p class="confirm-card__insurance">
+                Basic Insurance
+                <span>15 EUR</span>
+              </p>
+            </div>
+            <p class="confirm-card__total">
+              Total
+              <span>62,98 EUR</span>
+            </p>
+          </article>
+
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" disabled/>
+            <span class="checkbox__custom">
+              <svg class="icon icon--14">
+                <use href="#checkV"></use>
+              </svg>
+            </span>
+            <p class="checkbox__text">I accept the terms & conditions</p>
+          </label>
+
+          <div class="confirm-form__btns">
+            <button type="button" class="main-btn main-btn--secondary confirm-form__btn">Pay Cash</button>
+            <button type="button" class="main-btn confirm-form__btn">Pay Now</button>
+          </div>
+        </div>
+      </form>
     </section>
     <section class="contact-us">
       <div class="main-container contact-us__container">
         <div class="contact-us__content">
           <div class="contact-us__avatars">
             <div class="avatar">
-              <img src="./src/img/avatar01.webp" alt="user01" />
+              <img src="./src/img/avatar03.webp" alt="user03" />
             </div>
             <div class="avatar">
               <img src="./src/img/avatar02.webp" alt="user02" />
             </div>
             <div class="avatar">
-              <img src="./src/img/avatar03.webp" alt="user03" />
+              <img src="./src/img/avatar01.webp" alt="user01" />
             </div>
           </div>
           <div class="contact-us__description">
@@ -641,7 +840,7 @@
                 placeholder="Enter your email"
               />
             </div>
-            <button type="submit" class="main-btn main-btn--light">
+            <button type="submit" class="main-btn main-btn--secondary">
               Subscribe
             </button>
           </form>

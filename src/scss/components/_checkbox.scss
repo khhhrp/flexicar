@@ -1,0 +1,61 @@
+@use "../base/variables" as var;
+
+.checkbox {
+  $root: &;
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+  user-select: none;
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + #{$root}__custom {
+      background-color: var.$primary;
+      border-color: var.$primary;
+
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:disabled + #{$root}__custom {
+      color: var.$gray--100; //чекнутый и disable
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 0.6rem;
+    border: 0.1rem solid var.$gray--100;
+    transition-property: background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+
+    svg {
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+}

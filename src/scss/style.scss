@@ -7,13 +7,18 @@
 @use "./components/icon";
 @use "./components/logo";
 @use "./components/burger-btn";
+@use "./components/main-btn";
+@use "./components/checkbox";
+@use "./components/input-group";
 @use "./components/progress";
 @use "./components/rental-card";
 @use "./components/rental-steps";
 @use "./components/options";
+@use "./components/insurance";
+@use "./components/insurance-card";
+@use "./components/confirm-form";
+@use "./components/confirm-card";
 @use "./components/avatar";
-@use "./components/main-btn";
-@use "./components/input-group";
 
 //layouts
 @use "./layouts/header";

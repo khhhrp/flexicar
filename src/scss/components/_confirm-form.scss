@@ -1,0 +1,31 @@
+@use "../base/variables" as var;
+
+.confirm-form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__group {
+    label {
+      span {
+        color: var.$primary;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

@@ -13,15 +13,40 @@
   border-radius: 0.8rem;
   white-space: nowrap;
   padding: 1.2rem 2.6rem;
-  transition: background-color 250ms ease;
+  user-select: none;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
 
-  &--light {
+  &:disabled {
     background-color: rgba(var.$primary, 0.2);
+    pointer-events: none;
+    color: var.$gray--500;
   }
 
   @media (hover: hover) {
     &:hover {
-      background-color: var.$primary--light;
+      background-color: rgba(var.$primary, 0.7);
+    }
+  }
+
+  &--secondary {
+    background-color: rgba(var.$primary, 0.2);
+
+    &:focus {
+      outline: 0.1rem solid var.$primary;
+    }
+
+    &:disabled {
+      background-color: rgba(var.$primary, 0.1);
+      pointer-events: none;
+      color: var.$gray--500;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba(var.$brown, 0.4);
+      }
     }
   }
 }
