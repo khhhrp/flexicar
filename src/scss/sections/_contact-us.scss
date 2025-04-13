@@ -17,6 +17,28 @@
     background-color: rgba(var.$dark--900, 0.4);
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+    height: 14rem;
+    background-image: radial-gradient(
+      ellipse,
+      rgba(var.$black, 0.5),
+      transparent
+    );
+    filter: blur(6rem);
+  }
+
+  @media (width >=1024px) {
+    &::after {
+      translate: 0 -20%;
+    }
+  }
+
   &__container {
     position: relative;
     z-index: 10;
@@ -67,7 +89,7 @@
   &__text {
     font-size: 1.6rem;
 
-    @media (width >1024px) {
+    @media (width >= 1024px) {
       font-size: 1.8rem;
     }
   }

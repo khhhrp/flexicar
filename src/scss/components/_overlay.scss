@@ -6,6 +6,7 @@
   inset: 0;
   pointer-events: none;
   transition: background-color 200ms ease;
+  z-index: 300;
 
   &--active {
     pointer-events: visible;

@@ -7,7 +7,6 @@
   padding-block: 3.2rem;
 
   @media (width >= 768px) {
-    display: flex;
     flex-direction: row;
     column-gap: 2.4rem;
     justify-content: space-between;
@@ -28,7 +27,7 @@
       position: absolute;
       inset: 0;
       background-image: radial-gradient(ellipse, var.$white, transparent 45%);
-      filter: blur(60px);
+      filter: blur(6rem);
     }
 
     img {
@@ -64,8 +63,8 @@
 
     @media (width >=768px) {
       row-gap: 3.2rem;
-      flex-grow: 1;
-      flex-shrink: 0;
+      width: 100%;
+      max-width: 40rem;
     }
   }
 
@@ -142,5 +141,6 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 0.8rem;
     row-gap: 0.4rem;
+    white-space: nowrap;
   }
 }

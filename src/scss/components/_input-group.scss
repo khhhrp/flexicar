@@ -1,8 +1,20 @@
 @use "../base/variables" as var;
 
 .input-group {
+  $root: &;
   display: flex;
   flex-direction: column;
+
+  &:has(input:required) {
+    #{$root} {
+      &__label {
+        &::after {
+          content: "\00a0*";
+          color: var.$primary;
+        }
+      }
+    }
+  }
 
   &__label {
     font-size: 1.4rem;

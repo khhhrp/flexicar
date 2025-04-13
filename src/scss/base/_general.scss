@@ -36,15 +36,3 @@ button {
 .visually-hidden {
   @extend %visually-hidden;
 }
-
-.reserve-block {
-  height: 5.2rem;
-}
-
-.hide {
-  display: none;
-
-  @media (width >= 1024px) {
-    display: block;
-  }
-}

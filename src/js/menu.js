@@ -3,9 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".header__menu");
   const overlay = document.querySelector(".overlay");
 
+  const menuClose = document.querySelectorAll("[data-menu-close]");
+  const menuToggle = document.querySelectorAll("[data-menu-toggle]");
+
   function toggleClass(element, active) {
     element.classList.toggle(active);
   }
+
+  menuClose.forEach((el) => el.addEventListener("click", closeMenu));
+  menuToggle.forEach((el) => el.addEventListener("click", toggleMenu));
 
   function closeMenu() {
     menu.classList.remove("header__menu--open");
@@ -13,15 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.classList.remove("overlay--active");
   }
 
-  burgerBtn.addEventListener("click", () => {
+  function toggleMenu() {
     toggleClass(burgerBtn, "burger-btn--active");
     toggleClass(menu, "header__menu--open");
     toggleClass(overlay, "overlay--active");
-  });
-
-  overlay.addEventListener("click", () => {
-    closeMenu();
-  });
+  }
 
   window.addEventListener("resize", () => {
     closeMenu();

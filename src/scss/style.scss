@@ -12,6 +12,7 @@
 @use "./components/burger-btn";
 @use "./components/main-btn";
 @use "./components/checkbox";
+@use "./sections/rental-form";
 @use "./components/input-group";
 @use "./components/progress";
 @use "./components/rental-card";
@@ -19,7 +20,7 @@
 @use "./components/options";
 @use "./components/insurance";
 @use "./components/insurance-card";
-@use "./components/confirm-form";
+@use "./components/confirm";
 @use "./components/confirm-card";
 @use "./components/avatar";
 
@@ -29,4 +30,6 @@
 
 //sections
 @use "./sections/contact-us";
-@use "./sections/rental";
+
+//utils
+@use "./utils/utility-classes";

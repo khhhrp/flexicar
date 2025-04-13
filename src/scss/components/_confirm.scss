@@ -1,8 +1,9 @@
 @use "../base/variables" as var;
 
-.confirm-form {
-  @media (width >=1024px) {
-    grid-column: 2 / 3;
+.confirm {
+  @media (width >= 1024px) {
+    position: sticky;
+    top: 10rem;
   }
 
   &__container {
@@ -34,12 +35,6 @@
 
   &__group {
     width: 100%;
-
-    label {
-      span {
-        color: var.$primary;
-      }
-    }
 
     @media (width >= 768px) {
       grid-column: 1 / 2;
