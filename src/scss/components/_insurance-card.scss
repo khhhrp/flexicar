@@ -29,6 +29,12 @@
     svg {
       color: var.$white;
     }
+
+    #{$root} {
+      &__description {
+        color: var.$white;
+      }
+    }
   }
 
   &__input {
@@ -92,5 +98,6 @@
     font-weight: 300;
     font-size: 1.2rem;
     color: var.$gray--600;
+    transition: color 150ms ease;
   }
 }
