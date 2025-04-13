@@ -1,4 +1,5 @@
 @use "../base/variables" as var;
+@use "../base/helpers" as *;
 
 .options {
   $root: &;
@@ -13,10 +14,18 @@
       row-gap: 3.2rem;
       padding-inline: 1.6rem;
     }
+
+    @media (width >=1024px) {
+      padding: 0;
+    }
   }
 
   &__title {
     font-size: 2rem;
+
+    @media (width >= 1024px) {
+      font-size: 2.4rem;
+    }
   }
 
   &__cards {
@@ -27,9 +36,18 @@
     @media (width >= 768px) {
       gap: 2.4rem;
     }
+
+    @media (width >= 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+    }
   }
 
   &__card {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc((100% - 3.2rem) / 3);
     border-radius: 0.8rem;
     background-color: var.$gray--900;
     color: var.$white;
@@ -50,15 +68,15 @@
         translate: 0 -0.5rem;
         background-color: rgba(var.$primary, 0.2);
         outline-color: var.$primary;
-
-        &::before {
-          opacity: 1;
-        }
       }
     }
 
     @media (width >= 768px) {
       min-height: 7.7rem;
+    }
+
+    @media (width >= 1024px) {
+      column-gap: 0;
     }
 
     &:has(#{$root}__checkbox:checked) {
@@ -87,10 +105,7 @@
   }
 
   &__checkbox {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+    @extend %visually-hidden;
   }
 
   &__card-content {
@@ -127,6 +142,12 @@
         width: 24px;
       }
     }
+
+    @media (width >= 1024px) {
+      svg {
+        color: var.$white;
+      }
+    }
   }
 
   &__card-title {
@@ -136,6 +157,10 @@
       grid-column: 2 / -1;
       font-size: 1.6rem;
       padding-inline: 0.8rem;
+    }
+
+    @media (width >= 1200px) {
+      padding-right: 0;
     }
   }
 
@@ -148,6 +173,10 @@
     @media (width >= 768px) {
       grid-column: 2 / -1;
       padding-inline: 0.8rem;
+    }
+
+    @media (width >= 1200px) {
+      padding-right: 0;
     }
   }
 

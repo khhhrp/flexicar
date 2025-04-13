@@ -11,48 +11,69 @@
   padding: 0;
   background-color: transparent;
 
-  span {
-    position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    translate: -50%;
     background-color: var.$gray--400;
     height: 0.2rem;
     width: 2rem;
     border-radius: 0.9rem;
-    transition: background-color 250ms ease;
+    transition-property: background-color, rotate, translate;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
+  }
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      translate: -50%;
-      background-color: var.$gray--400;
-      height: 0.2rem;
-      width: 2rem;
-      border-radius: 0.9rem;
-      transition: background-color 250ms ease;
-    }
+  &::before {
+    translate: -50% -0.6rem;
+  }
 
-    &::before {
-      top: 0.6rem;
-    }
+  &::after {
+    translate: -50% 0.6rem;
+  }
 
-    &::after {
-      bottom: 0.6rem;
-    }
+  span {
+    background-color: var.$gray--400;
+    height: 0.2rem;
+    width: 2rem;
+    border-radius: 0.9rem;
+    transition-property: background-color, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
   }
 
   @media (hover: hover) {
     cursor: pointer;
 
     &:hover {
-      span {
+      span,
+      &::before,
+      &::after {
         background-color: var.$primary;
-
-        &::before,
-        &::after {
-          background-color: var.$primary;
-        }
       }
+    }
+  }
+
+  &--active {
+    span {
+      opacity: 0;
+    }
+
+    &::before,
+    &::after {
+      top: 50%;
+      translate: -50% -50%;
+      background-color: var.$gray--500;
+    }
+
+    &::before {
+      rotate: 45deg;
+    }
+
+    &::after {
+      rotate: -45deg;
     }
   }
 }

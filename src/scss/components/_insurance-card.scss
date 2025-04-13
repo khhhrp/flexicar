@@ -1,7 +1,12 @@
 @use "../base/variables" as var;
+@use "../base/helpers" as *;
 
 .insurance-card {
+  $root: &;
   display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 25rem;
   flex-direction: column;
   row-gap: 1.6rem;
   padding: 1.6rem;
@@ -13,7 +18,7 @@
   transition-timing-function: ease;
   outline: 0.2rem solid transparent;
 
-  &:nth-child(2) {
+  &:has(#{$root}__input:checked) {
     outline-color: var.$gray--700;
     background-image: url("../img/cardBg.webp"),
       linear-gradient(-25deg, var.$primary, var.$terracotta--500);
@@ -26,13 +31,20 @@
     }
   }
 
+  &__input {
+    @extend %visually-hidden;
+  }
+
+  &:nth-child(2),
   &:nth-child(3) {
     svg {
       color: var.$green--300;
     }
   }
 
-  @media(hover: hover) {
+  @media (hover: hover) {
+    cursor: pointer;
+
     &:hover {
       translate: 0 -0.5rem;
       outline-color: var.$primary;

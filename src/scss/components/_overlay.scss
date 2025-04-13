@@ -1,0 +1,18 @@
+@use "../base/variables" as var;
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  transition: background-color 200ms ease;
+
+  &--active {
+    pointer-events: visible;
+    background-color: rgba(var.$black, 0.5);
+  }
+
+  @media (width >= 768px) {
+    display: block;
+  }
+}

@@ -1,4 +1,6 @@
 @use "../base/variables" as var;
+@use "../base/helpers" as *;
+
 html {
   font-size: 10px;
 }
@@ -8,6 +10,8 @@ body {
   line-height: 1.5;
   color: var.$white;
   background-color: var.$dark--900;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 button {
@@ -19,25 +23,28 @@ button {
 }
 
 .main-container {
-  max-width: 149rem;
   padding-inline: 1.6rem;
-  width: 100%;
-  margin-inline: auto;
 
   @media (width >=768px) {
     padding-inline: 3.2rem;
+    max-width: 152.8rem;
+    margin-inline: auto;
+    width: 100%;
   }
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  @extend %visually-hidden;
+}
+
+.reserve-block {
+  height: 5.2rem;
+}
+
+.hide {
+  display: none;
+
+  @media (width >= 1024px) {
+    display: block;
+  }
 }

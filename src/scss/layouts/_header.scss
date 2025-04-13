@@ -1,12 +1,18 @@
 @use "../base/variables" as var;
 
 .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   padding: 0.4rem 1.6rem;
   background-color: var.$dark--400;
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 6rem;
+  height: 5.2rem;
+  z-index: 100;
 
   @media (width >= 768px) {
     padding-block: 1.6rem;
@@ -17,43 +23,101 @@
   }
 
   &__logo {
-    img {
-      width: 15rem;
-      max-width: 100%;
+    max-width: 15rem;
+    flex-shrink: 0;
 
-      @media (width >= 1024px) {
-        max-width: 12.6rem;
+    @media (width >= 1024px) {
+      max-width: 12.6rem;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.4rem 1.6rem 3.6rem;
+    position: absolute;
+    height: calc(100dvh - 5.2rem);
+    top: 100%;
+    right: 0;
+    background-color: var.$dark--300;
+    translate: 100%;
+    transition-property: translate, opacity, visibility;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &--open {
+      translate: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (width >= 768px) {
+      max-width: 42rem;
+      transition-duration: 250ms;
+    }
+
+    @media (width >= 1024px) {
+      display: contents;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__nav {
+    --ss: 4.8rem;
+    $ss: var(--ss);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    overflow-y: auto;
+
+    @media (width >= 1024px) {
+      flex-direction: row;
+      overflow-x: auto;
+      margin-right: auto;
+      column-gap: 2.4rem;
+      margin-left: calc(#{$ss} * -1);
+      padding-inline: $ss;
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 $ss,
+        #000 calc(100% - #{$ss}),
+        transparent
+      );
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
     }
   }
 
-  &__left {
-    display: flex;
-    align-items: center;
-    column-gap: 8.4rem;
-    overflow-x: hidden;
-  }
-
-  &__nav {
-    display: none;
-    column-gap: 2.4rem;
-
-    @media (width >= 1024px) {
-      display: flex;
-      overflow-x: auto;
-    }
-  }
-
   &__link {
-    color: var.$white;
-    font-size: 1.6rem;
-    transition: color, 250ms ease;
+    color: var.$gray--400;
+    font-weight: 700;
+    font-size: 2.4rem;
+    transition: color 150ms ease;
     white-space: nowrap;
 
     @media (hover: hover) {
       &:hover {
         color: var.$primary;
       }
+    }
+
+    @media (width >= 1024px) {
+      color: var.$white;
+      font-weight: 400;
+      font-size: 1.6rem;
     }
   }
 
@@ -88,29 +152,45 @@
   }
 
   &__actions {
-    display: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     column-gap: 1.6rem;
     font-size: 1.6rem;
+    row-gap: 2.4rem;
+
+    @media (width >= 1024px) {
+      display: flex;
+      row-gap: 0;
+    }
+  }
+
+  &__actions-login {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    color: var.$white;
+    column-gap: 0.8rem;
+
+    svg {
+      order: 1;
+    }
+
+    @media (width >=1024px) {
+      display: none;
+    }
+  }
+
+  &__desktop-btn {
+    display: none;
 
     @media (width >= 1024px) {
       display: flex;
     }
   }
 
-  &__lang-btn,
   &__actions-link {
-    padding: 0.8rem 1.6rem;
-    display: flex;
-    align-items: center;
-    color: var.$gray--400;
-    white-space: nowrap;
-    transition: color 250ms ease;
-
-    @media (hover: hover) {
-      &:hover {
-        color: var.$primary;
-      }
-    }
+    grid-column: 1 / 2;
+    grid-row: 2;
   }
 
   &__lang-btn {
@@ -118,6 +198,9 @@
     column-gap: 0.8rem;
     border: none;
     background-color: transparent;
+    grid-column: 2 / -1;
+    grid-row: 2;
+    justify-self: end;
   }
 
   &__actions-link {

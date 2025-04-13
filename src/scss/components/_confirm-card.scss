@@ -15,10 +15,7 @@
     row-gap: 0.8rem;
   }
 
-  &__date,
-  &__location,
-  &__car,
-  &__insurance {
+  &__item {
     display: flex;
     align-items: center;
     justify-content: space-between;

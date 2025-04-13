@@ -31,6 +31,10 @@
   &__input-group {
     width: 25rem;
 
+    label {
+      padding-bottom: 0.6rem;
+    }
+
     @media (width >= 1024px) {
       width: 32rem;
     }

@@ -1,11 +1,14 @@
 //base
 @use "./base/custom-reset";
+@use "./base/helpers";
 @use "./base/variables";
 @use "./base/general";
 
 //components
 @use "./components/icon";
 @use "./components/logo";
+@use "./components/overlay";
+@use "./components/transparent-btn";
 @use "./components/burger-btn";
 @use "./components/main-btn";
 @use "./components/checkbox";
