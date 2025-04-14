@@ -5,7 +5,9 @@
   left: 0;
   right: 0;
   top: 0;
-  padding: 0.4rem 1.6rem;
+  padding-block: 0.4rem;
+  padding-right: calc(1.6rem + env(safe-area-inset-right));
+  padding-left: calc(1.6rem + env(safe-area-inset-left));
   background-color: var.$dark--400;
   display: flex;
   justify-content: space-between;
@@ -19,7 +21,8 @@
   }
 
   @media (width >= 1024px) {
-    padding-inline: 4rem;
+    padding-left: calc(4rem + env(safe-area-inset-left));
+    padding-right: calc(4rem + env(safe-area-inset-right));
   }
 
   &__logo {
