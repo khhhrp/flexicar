@@ -5,6 +5,14 @@
     display: flex;
     flex-direction: column;
     row-gap: 2.4rem;
+
+    @media (width >= 768px) {
+      margin-inline: -1.6rem;
+    }
+
+    @media (width >= 1024px) {
+      margin-inline: 0;
+    }
   }
 
   &__title {

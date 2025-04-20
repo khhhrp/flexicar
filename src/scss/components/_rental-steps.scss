@@ -2,7 +2,6 @@
 
 .rental-steps {
   border-top: 0.1rem solid var.$gray--700;
-  border-bottom: 0.1rem solid var.$gray--700;
   background-color: var.$dark--400;
   padding-top: 2.4rem;
   padding-bottom: 1.6rem;
@@ -11,6 +10,7 @@
   @media (width >= 768px) {
     padding-top: 1.6rem;
     margin-inline: -3.2rem;
+    border-bottom: 0.1rem solid var.$gray--700;
   }
 
   @media (width >= 1024px) {
