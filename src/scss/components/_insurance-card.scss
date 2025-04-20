@@ -35,11 +35,10 @@
         color: var.$white;
       }
     }
+  }
 
-
-    @media (width >= 1024px) {
-      padding: 2.4rem;
-    }
+  @media (width >= 1024px) {
+    padding: 2.4rem;
   }
 
   &__input {
@@ -79,7 +78,6 @@
   &__price {
     font-weight: 500;
     font-size: 2.4rem;
-
 
     @media (width >= 1024px) {
       font-size: 3.2em;
