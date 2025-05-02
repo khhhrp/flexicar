@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> svg-sprite }}
+    <div class="reserve-block"></div>
+    {{> header }}
+    <div data-menu-close class="overlay"></div>
+    <section class="personal-info main-section">
+      <div class="personal-info__picture main-section__picture">
+        <img src="./src/img/dark-back.webp" alt="abstract-image" />
+      </div>
+      <div class="personal-info__content">
+        <div class="personal-info__header">
+          <div class="personal-info__header-inner">
+            <h2 class="personal-info__title">Personal Info</h2>
+            <nav class="personal-info__nav">
+              <a href="#!" class="personal-info__link">
+                My Account
+                <svg class="icon icon--16">
+                  <use href="#chevronRight"></use>
+                </svg>
+              </a>
+              <a href="#!" class="personal-info__link">
+                Personal Info
+                <svg class="icon icon--16">
+                  <use href="#chevronRight"></use>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          <button type="button" class="main-btn personal-info__btn">
+            Save
+          </button>
+        </div>
+        <form class="personal-form">
+          <div class="input-group personal-form__group">
+            <label
+              class="input-group__label personal-form__label"
+              for="firstName"
+              >First Name</label
+            >
+            <input
+              class="input-group__input"
+              type="text"
+              required=""
+              minlength="4"
+              placeholder="Denis"
+              id="firstName"
+              name="firstName"
+            />
+          </div>
+          <div class="input-group personal-form__group">
+            <label
+              class="input-group__label personal-form__label"
+              for="lastName"
+              >Last Name</label
+            >
+            <input
+              class="input-group__input"
+              type="text"
+              required=""
+              minlength="4"
+              placeholder="Bakalov"
+              id="lastName"
+              name="lastName"
+            />
+          </div>
+          <div class="input-group">
+            <label
+              class="input-group__label personal-form__label"
+              for="dateOfBirth"
+              >Date of birth</label
+            >
+            <div class="input-group__wrapper personal-form__wrapper">
+              <input
+                class="input-group__input personal-form__input personal-form__input--date"
+                type="date"
+                required=""
+                placeholder="Select your date of birth"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                value="2025-10-24"
+              />
+              <svg class="icon icon--20">
+                <use href="#chevronDown"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-group personal-form__group">
+            <label
+              class="input-group__label personal-form__label"
+              for="emailConfirm"
+              >Email</label
+            >
+            <input
+              class="input-group__input"
+              type="email"
+              id="emailConfirm"
+              required=""
+              minlength="4"
+              placeholder="olivia@untitledui.com"
+              name="emailConfirm"
+            />
+          </div>
+          <div class="input-group personal-form__group">
+            <label class="input-group__label personal-form__label" for="tel"
+              >Phone number</label
+            >
+            <div class="input-group__wrapper">
+              <input
+                class="input-group__input input-group__input--tel"
+                type="tel"
+                required=""
+                placeholder="+1 (555) 000-0000"
+                id="tel"
+                name="tel"
+              />
+              <button type="button" class="input-group__country-btn">
+                US
+                <svg class="icon icon--20">
+                  <use href="#chevronDown"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button type="button" class="main-btn personal-form__btn">
+            Save
+          </button>
+        </form>
+      </div>
+    </section>
+    {{> contact-us }} {{> footer }}
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>

@@ -23,13 +23,24 @@
 @use "./components/confirm";
 @use "./components/confirm-card";
 @use "./components/avatar";
+@use "./components/success-card";
+@use "./components/booking-card";
+@use "./components/personal-form";
+@use "./components/car-search";
 
 //layouts
 @use "./layouts/header";
 @use "./layouts/footer";
 
 //sections
+@use "./sections/hero";
 @use "./sections/contact-us";
+@use "./sections/register";
+@use "./sections/main-section";
+@use "./sections/payment-section";
+@use "./sections/my-booking";
+@use "./sections/personal-info";
+@use "./sections/questions";
 
 //utils
 @use "./utils/utility-classes";

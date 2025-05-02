@@ -1,0 +1,62 @@
+<section class="hero">
+  <div class="hero__picture">
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="./src/img/hyundai1024.webp"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="./src/img/hyundai768.webp"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="./src/img/hyundai320.webp"
+        type="image/webp"
+      />
+      <img class="hero__img" src="./src/img/hyundai320.webp" alt="Hyundai" />
+    </picture>
+  </div>
+  <form class="car-search">
+    <select class="car-search__select">
+      <option value="choose-location" selected>Choose location</option>
+      <option value="value2">Значение 2</option>
+      <option value="value3">Значение 3</option>
+    </select>
+  </form>
+  <div class="hero__content">
+    <h2 class="hero__title">Car Classes</h2>
+    <div class="hero__cards">
+      <a href="#!" class="hero__card">
+        <img src="./src/img/small-car.webp" alt="car" />
+        <h3 class="hero__card-title">Small</h3>
+      </a>
+      <a href="#!" class="hero__card">
+        <img src="./src/img/medium-car.webp" alt="car" />
+        <h3 class="hero__card-title">Medium</h3>
+      </a>
+      <a href="#!" class="hero__card">
+        <img src="./src/img/van-car.webp" alt="car" />
+        <h3 class="hero__card-title">VAN</h3>
+      </a>
+      <a href="#!" class="hero__card">
+        <img src="./src/img/pickup-car.webp" alt="car" />
+        <h3 class="hero__card-title">Pickup</h3>
+      </a>
+      <a href="#!" class="hero__card">
+        <img src="./src/img/electric.webp" alt="car" />
+        <h3 class="hero__card-title">Electric</h3>
+      </a>
+    </div>
+  </div>
+  <div class="hero__video">
+    <button type="button" class="hero__play">
+      <svg class="icon icon--140">
+        <use href="#play"></use>
+      </svg>
+    </button>
+    <img src="./src/img/video.webp" alt="image" />
+  </div>
+</section>

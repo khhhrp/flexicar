@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const rentalForm = document.querySelector(".rental-form");
   let counter = 0;
 
+  if (!stepBtn || !rentalForm) {
+    return;
+  }
+
   function showStep(index) {
     steps.forEach((step, i) => {
       step.classList.toggle("hide", i !== index);
@@ -32,30 +36,39 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function step() {
-    stepBtn.innerText = "Continue";
-
     if (counter === 0) {
       rentalCard.classList.add("hide");
       progressBlock.classList.remove("hide");
       showStep(0);
       updateProgress(0);
+      stepBtn.innerText = "Continue";
     } else if (counter < steps.length) {
       showStep(counter);
       updateProgress(counter);
+      stepBtn.innerText =
+        counter === steps.length - 1 ? "Complete" : "Continue";
+      rentalStepsCard.classList.remove("hide");
     }
 
     if (counter === steps.length - 1) {
-      rentalStepsCard.classList.add("hide");
       stepBtn.classList.add("hide");
+      rentalStepsCard.classList.add("hide");
     }
 
     counter++;
-
-    if (counter > steps.length) {
-      resetAll();
-    }
   }
 
-  stepBtn.addEventListener("click", step);
-  rentalForm.addEventListener("submit", step);
+  stepBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("Button clicked, counter:", counter);
+    if (counter < steps.length) {
+      step();
+    }
+  });
+
+  rentalForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("Form submitted, counter:", counter);
+    window.location.href = "payment-success.html";
+  });
 });

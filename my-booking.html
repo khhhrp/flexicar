@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> svg-sprite }}
+    <div class="reserve-block"></div>
+    {{> header }}
+    <div data-menu-close class="overlay"></div>
+    <section class="my-booking main-section">
+      <div class="my-booking__picture main-section__picture">
+        <img src="./src/img/dark-back.webp" alt="abstract-image" />
+      </div>
+      <div class="my-booking__content">
+        <nav class="my-booking__nav">
+          <a href="#!" class="my-booking__link">
+            My Account
+            <svg class="icon icon--16">
+              <use href="#chevronRight"></use>
+            </svg>
+          </a>
+          <a href="#!" class="my-booking__link">
+            My Bookings
+            <svg class="icon icon--16">
+              <use href="#chevronRight"></use>
+            </svg>
+          </a>
+        </nav>
+        <h2 class="my-booking__title">My Bookings</h2>
+        <div class="my-booking__cards">
+          <article class="booking-card">
+            <div class="booking-card__header">
+              <p class="booking-card__time">
+                Date and Time of Booking: January 10, 2025, 2:30 PM.
+              </p>
+              <span class="booking-card__badge">Completed</span>
+            </div>
+            <img
+              src="./src/img/heroCar.webp"
+              alt="car"
+              class="booking-card__img"
+            />
+            <div class="booking-card__inner">
+              <div class="booking-card__header booking-card__header--inner">
+                <p class="booking-card__time">
+                  Date and Time of Booking: January 10, 2025, 2:30 PM.
+                </p>
+                <span class="booking-card__badge booking-card__badge--active"
+                  >Active</span
+                >
+              </div>
+              <div class="booking-card__inner-content">
+                <div class="booking-card__info">
+                  <h3 class="booking-card__title">Volkswagen Touareg</h3>
+                  <p class="booking-card__text">or similar Intermediate</p>
+                  <p class="booking-card__days">1 rental day</p>
+                </div>
+                <div class="booking-card__details">
+                  <div class="booking-card__route">
+                    <p class="booking-card__date">
+                      Jan 1 | 08:00 - Jan 2 | 20:00
+                    </p>
+                    <p class="booking-card__station">
+                      Bratislava Bus station Nivy - Bratislava Bus station Nivy
+                    </p>
+                  </div>
+                  <p class="booking-card__total">
+                    Total
+                    <span>62,98 EUR</span>
+                  </p>
+                </div>
+                <div class="booking-card__btns">
+                  <button
+                    type="button"
+                    class="main-btn main-btn--secondary booking-card__btn"
+                  >
+                    Download Booking
+                  </button>
+                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                    Repeat Booking
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="booking-card">
+            <div class="booking-card__header">
+              <p class="booking-card__time">
+                Date and Time of Booking: January 10, 2025, 2:30 PM.
+              </p>
+              <span class="booking-card__badge">Completed</span>
+            </div>
+            <img
+              src="./src/img/heroCar.webp"
+              alt="car"
+              class="booking-card__img"
+            />
+            <div class="booking-card__inner">
+              <div class="booking-card__header booking-card__header--inner">
+                <p class="booking-card__time">
+                  Date and Time of Booking: January 10, 2025, 2:30 PM.
+                </p>
+                <span class="booking-card__badge booking-card__badge--cancelled"
+                  >Cancelled</span
+                >
+              </div>
+              <div class="booking-card__inner-content">
+                <div class="booking-card__info">
+                  <h3 class="booking-card__title">Volkswagen Touareg</h3>
+                  <p class="booking-card__text">or similar Intermediate</p>
+                  <p class="booking-card__days">1 rental day</p>
+                </div>
+                <div class="booking-card__details">
+                  <div class="booking-card__route">
+                    <p class="booking-card__date">
+                      Jan 1 | 08:00 - Jan 2 | 20:00
+                    </p>
+                    <p class="booking-card__station">
+                      Bratislava Bus station Nivy - Bratislava Bus station Nivy
+                    </p>
+                  </div>
+                  <p class="booking-card__total">
+                    Total
+                    <span>62,98 EUR</span>
+                  </p>
+                </div>
+                <div class="booking-card__btns">
+                  <button
+                    type="button"
+                    class="main-btn main-btn--secondary booking-card__btn"
+                  >
+                    Download Booking
+                  </button>
+                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                    Repeat Booking
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="booking-card">
+            <div class="booking-card__header">
+              <p class="booking-card__time">
+                Date and Time of Booking: January 10, 2025, 2:30 PM.
+              </p>
+              <span class="booking-card__badge">Completed</span>
+            </div>
+            <img
+              src="./src/img/heroCar.webp"
+              alt="car"
+              class="booking-card__img"
+            />
+            <div class="booking-card__inner">
+              <div class="booking-card__header booking-card__header--inner">
+                <p class="booking-card__time">
+                  Date and Time of Booking: January 10, 2025, 2:30 PM.
+                </p>
+                <span class="booking-card__badge">Completed</span>
+              </div>
+              <div class="booking-card__inner-content">
+                <div class="booking-card__info">
+                  <h3 class="booking-card__title">Volkswagen Touareg</h3>
+                  <p class="booking-card__text">or similar Intermediate</p>
+                  <p class="booking-card__days">1 rental day</p>
+                </div>
+                <div class="booking-card__details">
+                  <div class="booking-card__route">
+                    <p class="booking-card__date">
+                      Jan 1 | 08:00 - Jan 2 | 20:00
+                    </p>
+                    <p class="booking-card__station">
+                      Bratislava Bus station Nivy - Bratislava Bus station Nivy
+                    </p>
+                  </div>
+                  <p class="booking-card__total">
+                    Total
+                    <span>62,98 EUR</span>
+                  </p>
+                </div>
+                <div class="booking-card__btns">
+                  <button
+                    type="button"
+                    class="main-btn main-btn--secondary booking-card__btn"
+                  >
+                    Download Booking
+                  </button>
+                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                    Repeat Booking
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="booking-card">
+            <div class="booking-card__header">
+              <p class="booking-card__time">
+                Date and Time of Booking: January 10, 2025, 2:30 PM.
+              </p>
+              <span class="booking-card__badge">Completed</span>
+            </div>
+            <img
+              src="./src/img/heroCar.webp"
+              alt="car"
+              class="booking-card__img"
+            />
+            <div class="booking-card__inner">
+              <div class="booking-card__header booking-card__header--inner">
+                <p class="booking-card__time">
+                  Date and Time of Booking: January 10, 2025, 2:30 PM.
+                </p>
+                <span class="booking-card__badge booking-card__badge--cancelled"
+                  >Cancelled</span
+                >
+              </div>
+              <div class="booking-card__inner-content">
+                <div class="booking-card__info">
+                  <h3 class="booking-card__title">Volkswagen Touareg</h3>
+                  <p class="booking-card__text">or similar Intermediate</p>
+                  <p class="booking-card__days">1 rental day</p>
+                </div>
+                <div class="booking-card__details">
+                  <div class="booking-card__route">
+                    <p class="booking-card__date">
+                      Jan 1 | 08:00 - Jan 2 | 20:00
+                    </p>
+                    <p class="booking-card__station">
+                      Bratislava Bus station Nivy - Bratislava Bus station Nivy
+                    </p>
+                  </div>
+                  <p class="booking-card__total">
+                    Total
+                    <span>62,98 EUR</span>
+                  </p>
+                </div>
+                <div class="booking-card__btns">
+                  <button
+                    type="button"
+                    class="main-btn main-btn--secondary booking-card__btn"
+                  >
+                    Download Booking
+                  </button>
+                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                    Repeat Booking
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="booking-card">
+            <div class="booking-card__header">
+              <p class="booking-card__time">
+                Date and Time of Booking: January 10, 2025, 2:30 PM.
+              </p>
+              <span class="booking-card__badge">Completed</span>
+            </div>
+            <img
+              src="./src/img/heroCar.webp"
+              alt="car"
+              class="booking-card__img"
+            />
+            <div class="booking-card__inner">
+              <div class="booking-card__header booking-card__header--inner">
+                <p class="booking-card__time">
+                  Date and Time of Booking: January 10, 2025, 2:30 PM.
+                </p>
+                <span class="booking-card__badge">Completed</span>
+              </div>
+              <div class="booking-card__inner-content">
+                <div class="booking-card__info">
+                  <h3 class="booking-card__title">Volkswagen Touareg</h3>
+                  <p class="booking-card__text">or similar Intermediate</p>
+                  <p class="booking-card__days">1 rental day</p>
+                </div>
+                <div class="booking-card__details">
+                  <div class="booking-card__route">
+                    <p class="booking-card__date">
+                      Jan 1 | 08:00 - Jan 2 | 20:00
+                    </p>
+                    <p class="booking-card__station">
+                      Bratislava Bus station Nivy - Bratislava Bus station Nivy
+                    </p>
+                  </div>
+                  <p class="booking-card__total">
+                    Total
+                    <span>62,98 EUR</span>
+                  </p>
+                </div>
+                <div class="booking-card__btns">
+                  <button
+                    type="button"
+                    class="main-btn main-btn--secondary booking-card__btn"
+                  >
+                    Download Booking
+                  </button>
+                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                    Repeat Booking
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="my-booking__pagination">
+          <button type="button" class="my-booking__pagination-btn">
+            Previous
+          </button>
+          <p class="my-booking__pagination-pages">Page 1 of 10</p>
+          <button type="button" class="my-booking__pagination-btn">Next</button>
+        </div>
+      </div>
+    </section>
+    {{> contact-us }}
+    {{> footer }}
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>

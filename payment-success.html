@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> svg-sprite }}
+    <div class="reserve-block"></div>
+    {{> header }}
+    <div data-menu-close class="overlay"></div>
+    <section class="payment-section main-section">
+      <div class="payment-section__picture main-section__picture">
+        <img src="./src/img/dark-back.webp" alt="abstract-image" />
+      </div>
+      <div class="payment-section__content">
+        <div class="payment-section__header">
+          <h2 class="payment-section__title">Thank you for your payment!</h2>
+          <p class="payment-section__text">
+            Your order has been successfully paid and we are happy to inform you
+            that the car is ready for hire. Thank you for choosing us!
+          </p>
+          <p class="payment-section__code">Your Booking Code #SSF62Z</p>
+        </div>
+        <article class="success-card">
+          <div class="success-card__inner">
+            <div class="success-card__car">
+              <img src="./src/img/heroCar.webp" alt="car" />
+              <div class="success-card__car-info">
+                <h3 class="success-card__car-title">Volkswagen Touareg</h3>
+                <p class="success-card__text">or similar Intermediate</p>
+                <p class="success-card__days">1 rental day</p>
+              </div>
+            </div>
+            <div class="success-card__route">
+              <p class="success-card__date">Jan 1 | 08:00 - Jan 2 | 20:00</p>
+              <p class="success-card__station">
+                Bratislava Bus station Nivy - Bratislava Bus station Nivy
+              </p>
+            </div>
+            <div class="success-card__details">
+              <div class="success-card__details-group">
+                <p class="success-card__details-text">
+                  Volkswagen Touareg<span>32,98 EUR</span>
+                </p>
+                <p class="success-card__details-text">
+                  Basic Insurance<span>15 EUR</span>
+                </p>
+                <h4 class="success-card__details-subtitle">Extras:</h4>
+                <p class="success-card__details-text">
+                  Full Tank Service<span>15 EUR</span>
+                </p>
+                <p class="success-card__details-text">
+                  Roadside assistance waiver<span>Free</span>
+                </p>
+              </div>
+              <p class="success-card__details-total">
+                Total
+                <span>62,98 EUR</span>
+              </p>
+              <button type="button" class="main-btn success-card__btn">
+                Download Booking
+                <svg class="icon icon--20">
+                  <use href="#download"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="success-card__personal">
+            <h4 class="success-card__personal-title">Personal Information</h4>
+            <div class="success-card__personal-info">
+              <p class="success-card__personal-item">
+                <svg class="icon icon--16">
+                  <use href="#user"></use>
+                </svg>
+                First Name:
+                <span>First Name</span>
+              </p>
+              <p class="success-card__personal-item">
+                <svg class="icon icon--16">
+                  <use href="#user"></use>
+                </svg>
+                Last Name:
+                <span>First Name</span>
+              </p>
+              <p class="success-card__personal-item">
+                <svg class="icon icon--16">
+                  <use href="#mail"></use>
+                </svg>
+                Email:
+                <span>First Name</span>
+              </p>
+              <p class="success-card__personal-item">
+                <svg class="icon icon--16">
+                  <use href="#mobile"></use>
+                </svg>
+                Mobile:
+                <span>First Name</span>
+              </p>
+            </div>
+          </div>
+          <div class="success-card__contact">
+            <a href="tel:1234567890" class="success-card__link">
+              <svg class="icon icon--24">
+                <use href="#phone"></use>
+              </svg>
+              +123 456 7890
+            </a>
+            <div class="success-card__social">
+              <a href="#!" class="success-card__social-link">
+                <svg class="icon icon--24">
+                  <use href="#fm"></use>
+                </svg>
+              </a>
+              <a href="#!" class="success-card__social-link">
+                <svg class="icon icon--24">
+                  <use href="#telegram"></use>
+                </svg>
+              </a>
+              <a href="#!" class="success-card__social-link">
+                <svg class="icon icon--24">
+                  <use href="#whatsapp"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <button type="button" class="payment-section__help-btn">
+        <svg class="icon icon--100">
+          <use href="#message-dots"></use>
+        </svg>
+      </button>
+    </section>
+    {{> contact-us }}
+    {{> footer }}
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>

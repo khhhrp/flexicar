@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import fs from "fs";
 import { createHtmlPlugin } from "vite-plugin-html";
+import handlebars from "vite-plugin-handlebars";
 
 const getHtmlInputs = () => {
   const files = fs
@@ -21,6 +22,10 @@ export default defineConfig({
   plugins: [
     createHtmlPlugin({
       minify: true,
+    }),
+    handlebars({
+      partialDirectory: resolve(__dirname, "./src/partials"),
+      reloadOnPartialChange: true,
     }),
   ],
   css: {

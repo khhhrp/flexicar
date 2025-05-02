@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> svg-sprite }}
+    <div class="reserve-block"></div>
+    {{> header }}
+    <section class="register">
+      <div class="register__picture">
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcset="./src/img/mas1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./src/img/mas768.webp"
+            type="image/webp"
+          />
+          <img class="hero__img" src="./src/img/mas768.webp" alt="Hyundai" />
+        </picture>
+      </div>
+      <div class="register__content">
+        <form class="register__form">
+          <h2 class="register__title">Sign in or create an account</h2>
+          <p class="register__text">
+            You can sign in using your Booking.com account to access our
+            services.
+          </p>
+          <div class="input-group register__group">
+            <label class="input-group__label" for="registerEmail">Email</label>
+            <input
+              class="input-group__input"
+              type="email"
+              required
+              minlength="4"
+              placeholder="olivia@untitledui.com"
+              id="registerEmail"
+              name="email"
+            />
+          </div>
+          <button
+            data-target="register__verification"
+            class="main-btn register__btn"
+            type="submit"
+          >
+            Continue with Email
+          </button>
+          <p class="register__info">Or use one of these options</p>
+          <div class="register__btns">
+            <button
+              data-target="register__verification"
+              type="button"
+              class="register__social-btn"
+            >
+              <svg class="icon icon--24">
+                <use href="#google"></use>
+              </svg>
+              Continue with Google
+            </button>
+            <button
+              data-target="register__verification"
+              type="button"
+              class="register__social-btn"
+            >
+              <svg class="icon icon--24">
+                <use href="#facebook"></use>
+              </svg>
+              Continue with Facebook
+            </button>
+            <button
+              data-target="register__verification"
+              type="button"
+              class="register__social-btn"
+            >
+              <svg class="icon icon--24">
+                <use href="#apple"></use>
+              </svg>
+              Continue with Apple
+            </button>
+          </div>
+          <p class="register__copyright">
+            By signing in or creating an account, you agree with our
+            <a href="#!">Terms & Conditions</a> and
+            <a href="#!">Privacy Statement</a> <br />
+            All rights reserved. <br />
+            Copyright (2025-2030) – flexicars.com™
+          </p>
+        </form>
+        <form class="register__verification">
+          <h2 class="register__title">Check your email</h2>
+          <p class="register__text">
+            We sent a verification link to olivia@untitledui.com
+          </p>
+          <div class="register__code">
+            <label for="code" class="register__code-label">Secure code</label>
+            <div class="register__code-inputs">
+              <input
+                id="code"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]"
+                class="register__code-input"
+                placeholder="0"
+                name="code-digit-1"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]"
+                class="register__code-input"
+                placeholder="0"
+                name="code-digit-2"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]"
+                class="register__code-input"
+                placeholder="0"
+                name="code-digit-3"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]"
+                class="register__code-input"
+                placeholder="0"
+                name="code-digit-4"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]"
+                class="register__code-input"
+                placeholder="0"
+                name="code-digit-5"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]"
+                class="register__code-input"
+                placeholder="0"
+                name="code-digit-6"
+              />
+            </div>
+          </div>
+          <button class="main-btn register__btn" type="button">
+            Verify email
+          </button>
+          <p class="register__resend">
+            Didn’t receive the email? <a href="#!">Click to resend</a>
+          </p>
+          <button
+            data-target="register__form"
+            type="button"
+            class="register__back-btn"
+          >
+            <svg class="icon icon--20">
+              <use href="#arrow-left"></use>
+            </svg>
+            Back to log in
+          </button>
+        </form>
+      </div>
+    </section>
+    <div data-menu-close class="overlay"></div>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
