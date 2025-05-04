@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> svg-sprite }}
+    <div class="reserve-block"></div>
+    {{> header }}
+    <div data-menu-close class="overlay"></div>
+    <section class="search-results main-section">
+      <div class="search-results__picture main-section__picture">
+        <img src="./src/img/dark-back.webp" alt="abstract-image" />
+      </div>
+      {{> car-search }}
+      <div class="search-results__info-inner">
+        <div class="search-results__info">
+          <button type="button" class="search-results__back-btn">
+            <svg class="icon icon--24">
+              <use href="#arrow-left"></use>
+            </svg>
+            Back
+          </button>
+          <div class="search-results__route">
+            <p class="search-results__date">Jan 1 | 08:00 - Jan 2 | 20:00</p>
+            <p class="search-results__station">
+              Bratislava Bus station Nivy - Bratislava Bus station Nivy
+            </p>
+          </div>
+          <button type="button" class="search-results__edit-btn">
+            <svg class="icon icon--24">
+              <use href="#edit"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="search-results__content">
+        <h2 class="search-results__title">available cars</h2>
+        <div class="search-results__btns">
+          <button type="button" class="search-results__btn">
+            <svg class="icon icon--24">
+              <use href="#filter"></use>
+            </svg>
+            Filter
+          </button>
+          <button type="button" class="search-results__btn">
+            Sort
+            <svg class="icon icon--24">
+              <use href="#sort"></use>
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="search-results__sort-btn">
+          Sort by
+          <svg class="icon icon--24">
+            <use href="#chevronDown"></use>
+          </svg>
+        </button>
+        {{> filter }}
+        <div class="search-results__cards">
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+          <div class="product-card">
+            <a href="./product-page.html" class="product-card__link">
+              <div class="product-card__header">
+                <h3 class="product-card__title">Volkswagen Touareg</h3>
+                <h4 class="product-card__subtitle">or similar Intermediate</h4>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__info">
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#carDoors"></use>
+                    </svg>
+                    5 Doors
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#luggage"></use>
+                    </svg>
+                    3 Suitcase
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#gearbox"></use>
+                    </svg>
+                    Manual
+                  </p>
+                  <p class="product-card__text">
+                    <svg class="icon icon--16">
+                      <use href="#users"></use>
+                    </svg>
+                    5 Passengers
+                  </p>
+                </div>
+                <div class="product-card__picture">
+                  <img src="./src/img/heroCar.webp" alt="car" />
+                </div>
+              </div>
+              <div class="product-card__details">
+                <p class="product-card__price">32,98 EUR</p>
+                <p class="product-card__desc">From Per day</p>
+              </div>
+            </a>
+            <button type="button" class="main-btn product-card__btn">
+              Book
+            </button>
+          </div>
+        </div>
+        {{> pagination }}
+      </div>
+    </section>
+    {{> contact-us }} {{> footer }}
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>

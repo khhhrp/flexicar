@@ -1,4 +1,218 @@
 @use "../base/variables" as var;
 
 .car-search {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  background-color: rgba(var.$white, 0.1);
+  backdrop-filter: blur(5rem);
+  margin-top: -4rem;
+  border-radius: 1.6rem;
+
+  @media (width >= 768px) {
+    width: 100%;
+    max-width: 56.8rem;
+    margin-inline: auto;
+  }
+
+  @media (width >= 1024px) {
+    max-width: 146.8rem;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: -6rem;
+  }
+
+  @media (width >= 1200px) {
+    column-gap: 2.4rem;
+    padding: 3.2rem 6.4rem;
+  }
+
+  &__selects {
+    @media (width >= 1024px) {
+      display: flex;
+      align-items: center;
+      column-gap: 2.4rem;
+      flex-shrink: 0;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    &--hide {
+      display: none;
+    }
+
+    @media (width >= 1024px) {
+      &--hide {
+        display: flex;
+      }
+    }
+  }
+
+  &__checkbox {
+    @media (width >= 1024px) {
+      display: none;
+    }
+  }
+
+  &__label {
+    font-size: 1.4rem;
+  }
+
+  &__select-wrapper {
+    width: 100%;
+    position: relative;
+    color: var.$gray--400;
+  }
+
+  &__pin {
+    position: absolute;
+    top: 50%;
+    left: 1.4rem;
+    translate: 0 -50%;
+  }
+
+  &__select-chevron {
+    position: absolute;
+    top: 50%;
+    right: 1.4rem;
+    translate: 0 -50%;
+  }
+
+  &__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.4rem;
+    display: flex;
+    padding: 1.2rem 3.8rem;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var.$gray--450;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(var.$dark--200, 0.05);
+    background-color: transparent;
+    text-overflow: ellipsis;
+    color: var.$gray--400;
+    z-index: 20;
+    outline: 0.1rem solid transparent;
+    transition-property: border-color, outline-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+
+    &:focus {
+      outline-color: var.$primary;
+      border-color: transparent;
+    }
+
+    @media (width >= 1200px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+
+  &__pickers {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__inputs {
+    display: flex;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-size: 1.4rem;
+    display: flex;
+    width: 100%;
+    padding: 1.2rem 0.8rem;
+    align-items: center;
+    text-align: center;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    color: var.$gray--400;
+    gap: 0.8rem;
+    border: 0.1rem solid var.$gray--450;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(var.$dark--200, 0.05);
+    outline: 0.1rem solid transparent;
+    transition-property: border-color, outline-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+
+    &:focus {
+      border-color: transparent;
+      outline-color: var.$primary;
+    }
+
+    @media (width >= 768px) {
+      text-align: start;
+      padding-inline: 1.4rem;
+    }
+
+    @media (width >= 1024px) {
+      padding: 1.2rem 3.8rem;
+      font-size: 1.6rem;
+    }
+  }
+  &__calendar {
+    display: none;
+
+    @media (width >= 1024px) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 1.4rem;
+      translate: 0 -50%;
+      color: var.$gray--400;
+    }
+  }
+
+  &__input-chevron {
+    display: none;
+
+    @media (width >= 768px) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 1.4rem;
+      translate: 0 -50%;
+      color: var.$gray--400;
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+  }
+
+  &__input-date {
+    border-radius: 0.8rem 0 0 0.8rem;
+  }
+
+  &__input-time {
+    border-radius: 0 0.8rem 0.8rem 0;
+
+    @media (width >= 1024px) {
+      padding-left: 1.4rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 1.6rem;
+    width: 100%;
+
+    @media (width >= 1024px) {
+      width: 18rem;
+      margin-top: 0;
+    }
+  }
 }

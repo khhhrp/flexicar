@@ -1,0 +1,37 @@
+@use "../base/variables" as var;
+
+.pagination {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.4rem;
+  column-gap: 1rem;
+  border-top: 0.1rem solid var.$gray--700;
+
+  @media (width >= 768px) {
+    display: flex;
+  }
+
+  &__btn {
+    padding: 0.8rem 1.2rem;
+    color: var.$gray--200;
+    border: none;
+    box-shadow: inset 0 0 0 0.1rem rgba(var.$dark--200, 0.18);
+    background-color: var.$gray--700;
+    border-radius: 0.8rem;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    transition: background-color 200ms ease;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var.$primary;
+      }
+    }
+  }
+
+  &__pages {
+    color: var.$gray--450;
+    font-size: 1.4rem;
+  }
+}

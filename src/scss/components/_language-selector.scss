@@ -1,0 +1,74 @@
+@use "../base/variables" as var;
+
+.language-selector {
+  $root: &;
+  padding: 0.6rem;
+  position: absolute;
+  bottom: calc(100% + 1.2rem);
+  top: -10rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
+  width: 18rem;
+  min-height: fit-content;
+  border-radius: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  border: 0.1rem solid var.$gray--900;
+  background-color: var.$dark--400;
+  box-shadow: 0 1.6rem 2rem 0 rgba(var.$black, 0.5),
+    0 0.4rem 0.6rem -0.02rem rgba(var.$dark--200, 0.03);
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (width >= 1024px) {
+    top: calc(100% + 1.2rem);
+    left: -11rem;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    padding: 1rem 0.8rem;
+    border-radius: 0.6rem;
+    transition: background-color 200ms ease;
+
+    @media (hover: hover) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: var.$gray--900;
+      }
+    }
+
+    svg {
+      transition: opacity 200ms ease;
+      color: var.$primary;
+      margin-left: auto;
+      opacity: 0;
+    }
+
+    &:has(input:checked) {
+      background-color: var.$gray--900;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}

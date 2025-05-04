@@ -6,519 +6,82 @@
     <div class="reserve-block"></div>
     {{> header }}
     <div data-menu-close class="overlay"></div>
-    <form class="rental-form">
-      <div class="main-container rental-form__container">
-        <div class="rental-form__nav">
-          <a href="#!" class="rental-form__link">
-            Home
-            <svg class="icon icon--16">
-              <use href="#chevronRight"></use>
-            </svg>
-          </a>
-          <a href="#!" class="rental-form__link">
-            Search results
-            <svg class="icon icon--16">
-              <use href="#chevronRight"></use>
-            </svg>
-          </a>
-          <a href="#!" class="rental-form__link">
-            Volkswagen Touareg
-            <svg class="icon icon--16">
-              <use href="#chevronRight"></use>
-            </svg>
-          </a>
-        </div>
-        <div class="rental-form__col">
-          <article class="rental-card">
-            <div class="rental-card__image">
-              <img src="./src/img/heroCar.webp" alt="car-image" />
-            </div>
-            <div class="rental-card__content">
-              <div class="rental-card__top">
-                <h2 class="rental-card__title">Volkswagen Touareg</h2>
-                <p class="rental-card__price">32,98 <span>EUR</span></p>
-              </div>
-              <ul class="rental-card__list">
-                <li class="rental-card__list-title">Included in Price</li>
-                <li class="rental-card__list-item">
-                  <svg class="icon icon--16">
-                    <use href="#check"></use>
-                  </svg>
-                  Airport/City Fee
-                </li>
-                <li class="rental-card__list-item">
-                  <svg class="icon icon--16">
-                    <use href="#check"></use>
-                  </svg>
-                  Local Tax
-                </li>
-                <li class="rental-card__list-item">
-                  <svg class="icon icon--16">
-                    <use href="#check"></use>
-                  </svg>
-                  Registration Fee
-                </li>
-                <li class="rental-card__list-item">
-                  <svg class="icon icon--16">
-                    <use href="#check"></use>
-                  </svg>
-                  Unlimited Mileage
-                </li>
-              </ul>
-              <div class="rental-card__info">
-                <p class="rental-card__text">
-                  <svg class="icon icon--16">
-                    <use href="#carDoors"></use>
-                  </svg>
-                  5 Doors
-                </p>
-                <p class="rental-card__text">
-                  <svg class="icon icon--16">
-                    <use href="#luggage"></use>
-                  </svg>
-                  3 Suitcase
-                </p>
-                <p class="rental-card__text">
-                  <svg class="icon icon--16">
-                    <use href="#gearbox"></use>
-                  </svg>
-                  Manual
-                </p>
-                <p class="rental-card__text">
-                  <svg class="icon icon--16">
-                    <use href="#users"></use>
-                  </svg>
-                  5 Passengers
-                </p>
-              </div>
-            </div>
-          </article>
-          <div class="rental-steps hide">
-            <div class="progress">
-              <div class="progress__item progress__item--active">
-                <div class="progress__indicator">
-                  <svg class="icon icon--16">
-                    <use href="#checkV"></use>
-                  </svg>
-                </div>
-                <p class="progress__text">Add on extras</p>
-              </div>
-              <div class="progress__item">
-                <div class="progress__indicator">
-                  <svg class="icon icon--16">
-                    <use href="#checkV"></use>
-                  </svg>
-                </div>
-                <p class="progress__text">Insurance</p>
-              </div>
-              <div class="progress__item">
-                <div class="progress__indicator">
-                  <svg class="icon icon--16">
-                    <use href="#checkV"></use>
-                  </svg>
-                </div>
-                <p class="progress__text">Confirm Order</p>
-              </div>
-              <div class="progress__item">
-                <div class="progress__indicator">
-                  <svg class="icon icon--16">
-                    <use href="#checkV"></use>
-                  </svg>
-                </div>
-                <p class="progress__text">Payment</p>
-              </div>
-            </div>
-            <div class="rental-steps__container">
-              <article class="rental-steps__card">
-                <img src="./src/img/heroCar.webp" alt="car-image" />
-                <div class="rental-steps__info">
-                  <h2 class="rental-steps__title">Volkswagen Touareg</h2>
-                  <p class="rental-steps__text">or similar Intermediate</p>
-                  <p class="rental-steps__day">1 rental day</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="options hide step">
-            <div class="options__container">
-              <h2 class="options__title">Add on extras</h2>
-              <div class="options__cards">
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#infinity"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title">Unlimited Mileage</span>
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#globe"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title">Cross-border Fee</span>
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#petrol"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title">Full Tank Service</span>
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#babySeat"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title">Child Seat</span>
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#navigationPointer"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title"
-                        >GPS Navigation System</span
-                      >
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#wifi"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title">Wi-Fi Hotspot</span>
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#driver"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title">Additional Driver</span>
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-                <label class="options__card">
-                  <input type="checkbox" class="options__checkbox" />
-                  <span class="options__card-content">
-                    <span class="options__card-image">
-                      <svg class="icon icon--20">
-                        <use href="#headphones"></use>
-                      </svg>
-                    </span>
-                    <span class="options__card-info">
-                      <span class="options__card-title"
-                        >Roadside assistance <span>waiver</span></span
-                      >
-                      <span class="options__card-price">15 eur</span>
-                    </span>
-                  </span>
-                  <span class="options__card-status">
-                    <span class="options__card-check"></span>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="insurance step hide">
-            <div class="insurance__container">
-              <h2 class="insurance__title">Insurance</h2>
-              <div class="insurance__cards">
-                <label class="insurance-card">
-                  <input
-                    type="radio"
-                    class="insurance-card__input"
-                    name="insurances"
-                    value="insurance1"
-                  />
-                  <span class="insurance-card__top">
-                    <span class="insurance-card__subtitle">No Insurance</span>
-                    <span class="insurance-card__price">Free</span>
-                  </span>
-                  <span class="insurance-card__info">
-                    <span class="insurance-card__title">Important Notice:</span>
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#alert"></use>
-                      </svg>
-                      You are fully responsible for any damage to the vehicle.
-                    </span>
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#alert"></use>
-                      </svg>
-                      Full repair costs will be charged in case of an accident
-                      or damage (no financial limit).
-                    </span>
-                  </span>
-                  <span class="insurance-card__description">
-                    We strongly recommend choosing one of the insurance options
-                    to ensure a worry-free journey.
-                  </span>
-                </label>
-                <label class="insurance-card">
-                  <input
-                    type="radio"
-                    class="insurance-card__input"
-                    name="insurances"
-                    value="insurance2"
-                    checked
-                  />
-                  <span class="insurance-card__top">
-                    <span class="insurance-card__subtitle"
-                      >Basic Insurance</span
-                    >
-                    <span class="insurance-card__price">15 EUR/day</span>
-                  </span>
-                  <span class="insurance-card__info">
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#check"></use>
-                      </svg>
-                      Coverage for vehicle damage in case of an accident (with
-                      excess).
-                    </span>
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#check"></use>
-                      </svg>
-                      Limited financial liability with a deductible/excess.
-                    </span>
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#check"></use>
-                      </svg>
-                      Partial coverage for car body damages (does not cover
-                      tires, windows, roof, or undercarriage).
-                    </span>
-                  </span>
-                </label>
-                <label class="insurance-card">
-                  <input
-                    type="radio"
-                    class="insurance-card__input"
-                    name="insurances"
-                    value="insurance3"
-                  />
-                  <span class="insurance-card__top">
-                    <span class="insurance-card__subtitle">
-                      Comprehensive Insurance
-                    </span>
-                    <span class="insurance-card__price">25 EUR/day</span>
-                  </span>
-                  <span class="insurance-card__info">
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#check"></use>
-                      </svg>
-                      Full coverage for all damages (including tires, windows,
-                      roof, and undercarriage).
-                    </span>
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#check"></use>
-                      </svg>
-                      Theft protection.
-                    </span>
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#check"></use>
-                      </svg>
-                      No deductible/excess (or minimal excess).
-                    </span>
-                    <span class="insurance-card__text">
-                      <svg class="icon icon--16">
-                        <use href="#check"></use>
-                      </svg>
-                      Roadside assistance in case of breakdowns or accidents.
-                    </span>
-                  </span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="confirm step hide">
-          <div class="confirm__container">
-            <h2 class="confirm__title">Confirming Order</h2>
-            <div class="input-group confirm__group">
-              <label class="input-group__label" for="firstName"
-                >First Name</label
-              >
-              <input
-                class="input-group__input"
-                type="text"
-                required
-                minlength="4"
-                placeholder="Enter Your First Name"
-                id="firstName"
-                name="firstName"
-              />
-            </div>
-            <div class="input-group confirm__group">
-              <label class="input-group__label" for="lastName">Last Name</label>
-              <input
-                class="input-group__input"
-                type="text"
-                required
-                minlength="4"
-                placeholder="Enter Your Last Name"
-                id="lastName"
-                name="lastName"
-              />
-            </div>
-            <div class="input-group confirm__group">
-              <label class="input-group__label" for="tel">Phone number</label>
-              <div class="input-group__wrapper">
-                <input
-                  class="input-group__input input-group__input--tel"
-                  type="tel"
-                  required
-                  placeholder="+1 (555) 000-0000"
-                  id="tel"
-                  name="tel"
-                />
-                <button type="button" class="input-group__country-btn">
-                  US
-                  <svg class="icon icon--20">
-                    <use href="#chevronDown"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="input-group confirm__group">
-              <label class="input-group__label" for="emailConfirm">Email</label>
-              <input
-                class="input-group__input"
-                type="email"
-                id="emailConfirm"
-                required
-                minlength="4"
-                placeholder="olivia@untitledui.com"
-                name="emailConfirm"
-              />
-            </div>
-            <div class="confirm-card confirm__card">
-              <div class="confirm-card__content">
-                <p class="confirm-card__item">
-                  Date
-                  <span>Jan 1 | 08:00 - Jan 2 | 20:00</span>
-                </p>
-                <p class="confirm-card__item">
-                  Location
-                  <span>Bratislava Bus... - Bratislava Bus...</span>
-                </p>
-                <p class="confirm-card__item">
-                  Volkswagen Touareg
-                  <span>32,98 EUR</span>
-                </p>
-                <p class="confirm-card__item">
-                  Basic Insurance
-                  <span>15 EUR</span>
-                </p>
-              </div>
-              <p class="confirm-card__total">
-                Total
-                <span>62,98 EUR</span>
-              </p>
-            </div>
-            <label class="checkbox confirm__checkbox">
-              <input type="checkbox" class="checkbox__input" />
-              <span class="checkbox__custom">
-                <svg class="icon icon--14">
-                  <use href="#checkV"></use>
-                </svg>
-              </span>
-              <span class="checkbox__text"
-                >I accept the terms & conditions</span
-              >
-            </label>
-            <div class="confirm__btns">
-              <button
-                type="submit"
-                class="main-btn main-btn--secondary confirm__btn"
-              >
-                Pay Cash
-              </button>
-              <button type="submit" class="main-btn confirm__btn">
-                Pay Now
-              </button>
-            </div>
-          </div>
-        </div>
-        <button type="button" class="main-btn rental-form__btn">
-          Proceed to Booking
-        </button>
+    {{> hero }}
+    <section class="questions">
+      <h2 class="questions__title">Frequently asked questions</h2>
+      <h3 class="questions__subtitle">
+        Everything you need to know about the product and billing.
+      </h3>
+      <div class="questions__info">
+        <details open class="questions__details">
+          <summary class="questions__summary">
+            Is there a free trial available?
+            <span class="questions__toggle-item"></span>
+          </summary>
+          <p class="questions__text">
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
+          </p>
+        </details>
+        <details class="questions__details">
+          <summary class="questions__summary">
+            Can I change my plan later?
+            <span class="questions__toggle-item"></span>
+          </summary>
+          <p class="questions__text">
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
+          </p>
+        </details>
+        <details class="questions__details">
+          <summary class="questions__summary">
+            What is your cancellation policy?
+            <span class="questions__toggle-item"></span>
+          </summary>
+          <p class="questions__text">
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
+          </p>
+        </details>
+        <details class="questions__details">
+          <summary class="questions__summary">
+            Can other info be added to an invoice?
+            <span class="questions__toggle-item"></span>
+          </summary>
+          <p class="questions__text">
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
+          </p>
+        </details>
+        <details class="questions__details">
+          <summary class="questions__summary">
+            How does billing work?
+            <span class="questions__toggle-item"></span>
+          </summary>
+          <p class="questions__text">
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
+          </p>
+        </details>
+        <details class="questions__details">
+          <summary class="questions__summary">
+            How do I change my account email?
+            <span class="questions__toggle-item"></span>
+          </summary>
+          <p class="questions__text">
+            Yes, you can try us for free for 30 days. If you want, we’ll provide
+            you with a free, personalized 30-minute onboarding call to get you
+            up and running as soon as possible.
+          </p>
+        </details>
       </div>
-    </form>
-    {{> contact-us }}
-    {{> footer }}
+    </section>
+    {{> contact-us }} {{> footer }}
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

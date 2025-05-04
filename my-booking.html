@@ -12,7 +12,7 @@
       </div>
       <div class="my-booking__content">
         <nav class="my-booking__nav">
-          <a href="#!" class="my-booking__link">
+          <a href="./personal-info.html" class="my-booking__link">
             My Account
             <svg class="icon icon--16">
               <use href="#chevronRight"></use>
@@ -75,7 +75,10 @@
                   >
                     Download Booking
                   </button>
-                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                  <button
+                    type="button"
+                    class="main-btn booking-card__btn booking-card__btn--order"
+                  >
                     Repeat Booking
                   </button>
                 </div>
@@ -130,7 +133,10 @@
                   >
                     Download Booking
                   </button>
-                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                  <button
+                    type="button"
+                    class="main-btn booking-card__btn booking-card__btn--order"
+                  >
                     Repeat Booking
                   </button>
                 </div>
@@ -183,7 +189,10 @@
                   >
                     Download Booking
                   </button>
-                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                  <button
+                    type="button"
+                    class="main-btn booking-card__btn booking-card__btn--order"
+                  >
                     Repeat Booking
                   </button>
                 </div>
@@ -238,7 +247,10 @@
                   >
                     Download Booking
                   </button>
-                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                  <button
+                    type="button"
+                    class="main-btn booking-card__btn booking-card__btn--order"
+                  >
                     Repeat Booking
                   </button>
                 </div>
@@ -291,7 +303,10 @@
                   >
                     Download Booking
                   </button>
-                  <button type="button" class="main-btn booking-card__btn booking-card__btn--order">
+                  <button
+                    type="button"
+                    class="main-btn booking-card__btn booking-card__btn--order"
+                  >
                     Repeat Booking
                   </button>
                 </div>
@@ -299,17 +314,10 @@
             </div>
           </article>
         </div>
-        <div class="my-booking__pagination">
-          <button type="button" class="my-booking__pagination-btn">
-            Previous
-          </button>
-          <p class="my-booking__pagination-pages">Page 1 of 10</p>
-          <button type="button" class="my-booking__pagination-btn">Next</button>
-        </div>
+        {{> pagination }}
       </div>
     </section>
-    {{> contact-us }}
-    {{> footer }}
+    {{> contact-us }} {{> footer }}
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

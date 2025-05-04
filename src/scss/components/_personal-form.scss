@@ -35,6 +35,14 @@
     }
   }
 
+  &__group {
+    input {
+      &::placeholder {
+        color: var.$white;
+      }
+    }
+  }
+
   &__input {
     &--date {
       &::-webkit-calendar-picker-indicator {

@@ -1,5 +1,5 @@
 <header class="header">
-  <a href="/" class="logo header__logo">
+  <a href="../../index.html" class="logo header__logo">
     <img src="./src/img/logo.svg" alt="logo" />
   </a>
   <div class="header__menu">
@@ -17,6 +17,7 @@
           <use href="#chevronDown"></use>
         </svg>
       </button>
+      {{> language-selector }}
       <a href="tel:1234567890" class="transparent-btn">
         <svg class="icon icon--24">
           <use href="#phone"></use>
@@ -38,6 +39,14 @@
         </svg>
         Sign In
       </a>
+      <button type="button" class="header__account-btn">
+        <span>OR</span>
+        name@gmail.com
+        <svg class="icon icon--24">
+          <use href="#chevronDown"></use>
+        </svg>
+      </button>
+      {{> account-menu }}
     </div>
   </div>
   <div class="header__right">

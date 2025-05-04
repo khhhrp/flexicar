@@ -9,6 +9,8 @@
 @use "./components/logo";
 @use "./components/overlay";
 @use "./components/transparent-btn";
+@use "./components/language-selector";
+@use "./components/account-menu";
 @use "./components/burger-btn";
 @use "./components/main-btn";
 @use "./components/checkbox";
@@ -26,7 +28,10 @@
 @use "./components/success-card";
 @use "./components/booking-card";
 @use "./components/personal-form";
+@use "./components/pagination";
 @use "./components/car-search";
+@use "./components/filter.scss";
+@use "./components/product-card";
 
 //layouts
 @use "./layouts/header";
@@ -34,6 +39,7 @@
 
 //sections
 @use "./sections/hero";
+@use "./sections/search-results";
 @use "./sections/contact-us";
 @use "./sections/register";
 @use "./sections/main-section";

@@ -3,25 +3,6 @@
 .payment-section {
   position: relative;
 
-  // &__picture {
-  //   display: none;
-
-  //   @media (width >= 768px) {
-  //     display: block;
-  //     height: 15rem;
-
-  //     img {
-  //       width: 100%;
-  //       height: 100%;
-  //       object-fit: cover;
-  //     }
-  //   }
-
-  //   @media (width >= 1024px) {
-  //     height: 27rem;
-  //   }
-  // }
-
   &__content {
     display: flex;
     flex-direction: column;
@@ -98,7 +79,7 @@
       background-color: var.$primary;
       color: var.$white;
       bottom: 12rem;
-      right: 8.7rem;
+      right: 4rem;
       border: none;
       transition-property: background-color, translate;
       transition-duration: 250ms;
@@ -119,6 +100,10 @@
           background-color: rgba(var.$primary, 0.7);
         }
       }
+    }
+
+    @media (width >= 1200px) {
+      right: 8.7rem;
     }
   }
 }

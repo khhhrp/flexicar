@@ -1,0 +1,120 @@
+<div class="car-search">
+  <div class="car-search__selects">
+    <div class="car-search__group">
+      <label for="pickupSelect" class="car-search__label"
+        >Pickup Location</label
+      >
+      <div class="car-search__select-wrapper">
+        <svg class="icon icon--16 car-search__pin">
+          <use href="#pin"></use>
+        </svg>
+        <svg class="icon icon--16 car-search__select-chevron">
+          <use href="#chevronDown"></use>
+        </svg>
+        <select id="pickupSelect" class="car-search__select">
+          <option class="car-search__option">Chose location</option>
+          <option class="car-search__option">var1</option>
+          <option class="car-search__option">var2</option>
+          <option class="car-search__option">var3</option>
+        </select>
+      </div>
+    </div>
+    <div class="car-search__group car-search__group--hide">
+      <label for="dropoffSelect" class="car-search__label"
+        >Dropoff Location</label
+      >
+      <div class="car-search__select-wrapper">
+        <svg class="icon icon--16 car-search__pin">
+          <use href="#pin"></use>
+        </svg>
+        <svg class="icon icon--16 car-search__select-chevron">
+          <use href="#chevronDown"></use>
+        </svg>
+        <select id="dropoffSelect" class="car-search__select">
+          <option class="car-search__option">Chose location</option>
+          <option class="car-search__option">var1</option>
+          <option class="car-search__option">var2</option>
+          <option class="car-search__option">var3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <label class="checkbox car-search__checkbox">
+    <input type="checkbox" checked class="checkbox__input" />
+    <span class="checkbox__custom">
+      <svg class="icon icon--14">
+        <use href="#checkV"></use>
+      </svg>
+    </span>
+    <span class="checkbox__text car-search__text"
+      >Return the vehicle to the same location
+    </span>
+  </label>
+  <div class="car-search__pickers">
+    <div class="car-search__group">
+      <label for="pickupDate" class="car-search__label">Pickup Date</label>
+      <div class="car-search__inputs">
+        <div class="car-search__input-wrapper">
+          <svg class="icon icon--16 car-search__calendar">
+            <use href="#calendar"></use>
+          </svg>
+          <svg class="icon icon--16 car-search__input-chevron">
+            <use href="#chevronDown"></use>
+          </svg>
+          <input
+            class="car-search__input car-search__input-date"
+            type="text"
+            value="Oct. 24"
+            readonly
+            id="pickupDate"
+          />
+        </div>
+        <div class="car-search__input-wrapper">
+          <svg class="icon icon--16 car-search__input-chevron">
+            <use href="#chevronDown"></use>
+          </svg>
+          <input
+            class="car-search__input car-search__input-time"
+            type="text"
+            value="04:30 PM"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+    <div class="car-search__group">
+      <label for="pickupDate2" class="car-search__label">Dropoff Date</label>
+      <div class="car-search__inputs">
+        <div class="car-search__input-wrapper">
+          <svg class="icon icon--16 car-search__calendar">
+            <use href="#calendar"></use>
+          </svg>
+          <svg class="icon icon--16 car-search__input-chevron">
+            <use href="#chevronDown"></use>
+          </svg>
+          <input
+            class="car-search__input car-search__input-date"
+            type="text"
+            value="Oct. 24"
+            readonly
+            id="pickupDate2"
+          />
+        </div>
+        <div class="car-search__input-wrapper">
+          <svg class="icon icon--16 car-search__input-chevron">
+            <use href="#chevronDown"></use>
+          </svg>
+          <input
+            class="car-search__input car-search__input-time"
+            type="text"
+            value="04:30 PM"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="../../search-results.html" class="main-btn car-search__btn"
+    >Show Cars</a
+  >
+</div>
