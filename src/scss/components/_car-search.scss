@@ -14,13 +14,13 @@
     width: 100%;
     max-width: 56.8rem;
     margin-inline: auto;
+    margin-top: -6rem;
   }
 
   @media (width >= 1024px) {
     max-width: 146.8rem;
     flex-direction: row;
     align-items: flex-end;
-    margin-top: -6rem;
   }
 
   @media (width >= 1200px) {
